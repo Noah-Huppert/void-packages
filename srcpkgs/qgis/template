@@ -1,0 +1,17 @@
+# Template file for 'qgis'
+pkgname=qgis
+version=3.10.2
+revision=1
+archs="x86_64"
+wrksrc="QGIS-final-${version//./_}"
+create_wrksrc=yes
+build_style=cmake
+hostmakedepends=""
+makedepends="mesa-opencl opencl-headers flex geos-devel grass libgdal-devel expat-devel libzip-devel postgresql-libs-devel sqlite-devel qt5-serialport-devel qt5-svg-devel qt5-webkit-devel qt5-location-devel qt5-tools-devel qt5-plugin-mysql qt5-plugin-odbc qt5-plugin-pgsql"
+depends=""
+short_desc="Free and Open Source Geographic Information System"
+maintainer="Noah Huppert <contact@noahh.io>"
+license="MIT"
+homepage="https://www.qgis.org"
+distfiles="https://github.com/qgis/QGIS/archive/final-3_10_2.tar.gz"
+checksum=d3b2fdebc4002e9c26f915ef3436c59102a0e78b4c5165772a113f0e7610c58a
