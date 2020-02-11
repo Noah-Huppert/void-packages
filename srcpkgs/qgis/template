@@ -5,8 +5,9 @@ revision=1
 archs="x86_64"
 wrksrc="QGIS-final-${version//./_}"
 build_style=cmake
+configure_args="-DGRASS_PREFIX7=/usr/lib/grass76/"
 hostmakedepends=""
-makedepends="opencl2-headers flex geos-devel grass libgdal-devel expat-devel libzip-devel postgresql-libs-devel sqlite-devel qt5-serialport-devel qt5-svg-devel qt5-webkit-devel qt5-location-devel qt5-tools-devel qt5-plugin-mysql qt5-plugin-odbc qt5-plugin-pgsql qt5-plugin-sqlite qt5-plugin-tds qca-qt5-devel qca-qt5-ossl python3-PyQt5 python3-sip qscintilla-qt5 qscintilla-qt5-devel python3-qscintilla-qt5 python3-PyQt5-devel-tools exiv2-devel"
+makedepends="mesa-opencl opencl2-headers flex geos-devel grass libgdal-devel expat-devel libzip-devel postgresql-libs-devel sqlite-devel qt5-serialport-devel qt5-svg-devel qt5-webkit-devel qt5-location-devel qt5-tools-devel qt5-plugin-mysql qt5-plugin-odbc qt5-plugin-pgsql qt5-plugin-sqlite qt5-plugin-tds qca-qt5-devel qca-qt5-ossl python3-PyQt5 python3-sip qscintilla-qt5 qscintilla-qt5-devel python3-qscintilla-qt5 python3-PyQt5-devel-tools exiv2-devel qt5-declarative-devel pkg-config netcdf-devel libxml2-devel gsl-devel proj-devel python3-txt2tags qtkeychain-qt5-devel qwt-devel libspatialindex-devel"
 depends=""
 short_desc="Free and Open Source Geographic Information System"
 maintainer="Noah Huppert <contact@noahh.io>"
