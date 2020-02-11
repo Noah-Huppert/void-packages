@@ -1,0 +1,33 @@
+# Template file for 'python3-qscintilla-qt5'
+pkgname=python3-qscintilla-qt5
+version=2.11.2
+revision=1
+#archs="i686 x86_64"
+wrksrc="QScintilla_gpl-${version}/Python"
+#create_wrksrc=yes
+#build_style=python3-module
+#configure_args=""
+#make_build_args=""
+#make_install_args=""
+#conf_files=""
+hostmakedepends="make qt5-qmake python3-devel python3-sip python3-PyQt5 python-PyQt5-devel qscintilla-qt5 qscintilla-qt5-devel"
+makedepends=""
+depends=""
+short_desc="Python bindings for QScintilla Qt5"
+maintainer="Noah Huppert <contact@noahh.io>"
+license="GPL-3.0"
+homepage="https://www.riverbankcomputing.com/software/qscintilla/intro"
+distfiles="https://www.riverbankcomputing.com/static/Downloads/QScintilla/${version}/QScintilla_gpl-${version}.tar.gz"
+checksum=029bdc476a069fda2cea3cd937ba19cc7fa614fb90578caef98ed703b658f4a1
+
+do_configure() {
+			python configure.py --pyqt PyQt5 --verbose
+}
+
+do_build() {
+		 make		 
+}
+
+do_install() {
+		   make install INSTALL_ROOT=$PKGDESTDIR
+}
