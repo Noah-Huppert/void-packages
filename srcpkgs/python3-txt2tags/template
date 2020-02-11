@@ -1,0 +1,22 @@
+# Template file for 'python3-txt2tags'
+pkgname=python3-txt2tags
+version=3.7
+revision=1
+#archs="i686 x86_64"
+wrksrc="txt2tags-${version}"
+#create_wrksrc=yes
+build_style=python3-module
+#configure_args=""
+#make_build_args=""
+#make_install_args=""
+#conf_files=""
+#make_dirs="/var/log/dir 0755 root root"
+hostmakedepends="python3-setuptools"
+makedepends=""
+depends=""
+short_desc="Convert plain text into many markup languages"
+maintainer="Noah Huppert <contact@noahh.io>"
+license="GPL-2.0"
+homepage="https://github.com/txt2tags/txt2tags/tree/v3"
+distfiles="https://github.com/txt2tags/txt2tags/archive/${version}.tar.gz"
+checksum=ba745fc1aa98996578afadeb325173f7032a40f161dc4f6f7a7aa08848d11d03
