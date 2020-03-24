@@ -67,6 +67,7 @@ libmpfr.so.6 mpfr-4.0.0_1
 libppl.so.14 ppl-1.2_1
 libppl_c.so.4 ppl-0.11_1
 libstdc++.so.6 libstdc++-4.4.0_1
+libspatialite.so.7 libspatialite-4.3.0a_1
 libssp.so.0 libssp-4.4.0_1
 libncurses.so.6 ncurses-libs-6.0_1 ignore
 libncurses.so.5 ncurses-libs-6.0_1 ignore
@@ -3802,3 +3803,4 @@ libosdCPU.so.3.4.0 OpenSubdiv-3.4.0_1
 libdino.so.0 dino-0.1.0_1
 libxmpp-vala.so.0 dino-0.1.0_1
 libqlite.so.0 dino-0.1.0_1
+mod_spatialite.so.7 libspatialite-4.3.0a_1
