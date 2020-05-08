@@ -1,6 +1,6 @@
 # Template file for 'emacs'
 pkgname=emacs
-version=26.3
+version=27.0.91
 revision=1
 build_style=gnu-configure
 configure_args="--with-file-notification=inotify --with-modules
@@ -20,8 +20,8 @@ short_desc="GNU Emacs editor"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="GPL-3.0-or-later"
 homepage="http://www.gnu.org/software/emacs/"
-distfiles="${GNU_SITE}/${pkgname}/${pkgname}-${version}.tar.xz"
-checksum=4d90e6751ad8967822c6e092db07466b9d383ef1653feb2f95c93e7de66d3485
+distfiles="${GNU_SITE}/${pkgname}/pretest/${pkgname}-${version}.tar.xz"
+checksum=96813dd385dec81ceb1868645939d49b81ca2c1feb42a58b4d38125ebd1345aa
 replaces="emacs>=0"
 nocross=yes
 nopie=yes
