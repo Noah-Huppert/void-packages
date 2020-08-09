@@ -2,18 +2,18 @@
 pkgname=discord
 version=0.0.11
 revision=1
-depends="alsa-lib dbus-glib gtk+3 GConf libnotify nss libXtst libcxx libatomic"
-wrksrc="Discord"
 archs="x86_64"
-nopie=yes
-repository=nonfree
-restricted=yes
+wrksrc="Discord"
+depends="alsa-lib dbus-glib gtk+3 GConf libnotify nss libXtst libcxx libatomic"
 short_desc="Chat and VOIP application"
 maintainer="Ryan Conwell <ryanconwell@protonmail.com>"
 license="custom:Proprietary"
 homepage="https://discordapp.com"
 distfiles="https://dl.discordapp.net/apps/linux/${version}/discord-${version}.tar.gz"
 checksum=a474761d72ee3fb7fdd31aefc441fc5aa953a2f5dcbe8c30f14fbe105fe458e9
+nopie=yes
+repository=nonfree
+restricted=yes
 
 do_install() {
 	local package_location="usr/lib/$pkgname" item
