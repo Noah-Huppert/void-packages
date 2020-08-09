@@ -2,16 +2,21 @@
 pkgname=wxFormBuilder
 version=3.9.0
 revision=1
+_ticpp_commit=eb79120ea16b847ce9f483a298a394050f463d6b
 build_style=meson
 makedepends="wxWidgets-gtk3-devel"
 short_desc="RAD tool for wxWidgets GUI design"
 maintainer="Ralph van Etten <ralph@et10.org>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/wxFormBuilder/wxFormBuilder"
-distfiles="https://github.com/wxFormBuilder/wxFormBuilder/archive/v${version}.tar.gz"
-checksum=e63532e71828d5e168388380fe627225f997267495da4bf6c55ef592738bdc88
+distfiles="https://github.com/wxFormBuilder/wxFormBuilder/archive/v${version}.tar.gz https://github.com/wxFormBuilder/ticpp/archive/${_ticpp_commit}.tar.gz"
+checksum="e63532e71828d5e168388380fe627225f997267495da4bf6c55ef592738bdc88 8ca17097ef3cc50dffa611ab23a084a671a707023474b6b8c0fa25e3dd7f9cbb"
 patch_args="-Np1 --ignore-whitespace"
 
 post_install() {
 	vinstall ${FILESDIR}/wxformbuilder.desktop 0644 /usr/share/applications
+}
+
+post_extract() {
+	mv ../ticpp-${_ticpp_commit}/* subprojects/ticpp
 }
