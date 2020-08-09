@@ -1,0 +1,32 @@
+# Template file for 'mongod'
+pkgname=mongod
+version=4.4.0
+revision=1
+#archs="i686 x86_64"
+wrksrc="mongo-r${version}"
+#create_wrksrc=yes
+#build_style=python
+#configure_args=""
+#make_build_args=""
+#make_install_args=""
+#conf_files=""
+#make_dirs="/var/log/dir 0755 root root"
+hostmakedepends="python3 python3-pip python3-devel libressl-devel libcurl-devel"
+makedepends=""
+depends=""
+short_desc="MongoDB Database server"
+maintainer="Noah Huppert <contact@noahh.io>"
+license="proprietary"
+homepage="https://www.mongodb.com/"
+distfiles="https://github.com/mongodb/mongo/archive/r${version}.tar.gz"
+checksum=0d12f5b5ff90a5268216fdb76d72b5f4654535fd52a2436c48886405c26eb401
+repository=nonfree
+restricted=yes
+
+do_build() {
+		 python -m pip install -r etc/pip/compile-requirements.txt
+}
+
+do_install() {
+		 python buildscripts/scons.py install-mongod MONGO_VERSION=${version} --disable-warnings-as-errors
+}
