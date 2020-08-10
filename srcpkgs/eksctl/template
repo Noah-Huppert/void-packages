@@ -1,0 +1,35 @@
+# Template file for 'eksctl'
+pkgname=eksctl
+version=0.25.0
+revision=1
+#archs="i686 x86_64"
+#wrksrc=
+#create_wrksrc=yes
+build_style=go
+#configure_args=""
+#make_build_args=""
+#make_install_args=""
+#conf_files=""
+#make_dirs="/var/log/dir 0755 root root"
+hostmakedepends="make git"
+makedepends=""
+depends=""
+short_desc="Official CLI for Amazon EKS"
+maintainer="Noah Huppert <contact@noahh.io>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/weaveworks/eksctl"
+distfiles="https://github.com/weaveworks/eksctl/archive/${version}.tar.gz"
+checksum=0d75bf60449be78178b9b0e1c0a5c92d79bf58bf98f225d68014ad9e179e2174
+
+do_build() {
+		 make install-build-deps
+		 make build
+}
+
+do_check() {
+		 make test
+}
+
+#do_install() {
+#		 make install
+#}
